@@ -1,0 +1,71 @@
+import React from "react";
+import "./App.css";
+import IconToday from "./IconToday";
+import DetailsToday from "./DetailsToday";
+import ForecastElt from "./ForecastElt";
+import PictureBlock from "./PictureBlock";
+
+export default function App() {
+  return (
+    <div className="App">
+      <header>
+        <div id="todayIs">Tuesday, 19:00</div>
+        <span id="welcomeStatement"> Check the weather here</span>
+        <span id="city"></span>
+      </header>
+
+      <div className="row">
+        <div className="col-md-3">
+          <IconToday />
+        </div>
+        <div className="col-md-6">
+          <DetailsToday />
+        </div>
+        <div className="col-md-3 d-none d-md-block">
+          <IconToday />
+        </div>
+      </div>
+      <header id="changeCity">Change city?</header>
+      <form>
+        <input
+          id="searchCity"
+          type="text"
+          placeholder="City name"
+          autoComplete="on"
+          autoFocus="on"
+        />
+        <button type="submit" id="specified" value="search">
+          Search
+        </button>
+      </form>
+      <button type="text" id="local" value="local">
+        Local weather
+      </button>
+      <br />
+
+      <div className="row">
+        <div className="col-sm-7" id="forecast">
+          <ul>
+            <ForecastElt />
+            <ForecastElt />
+            <ForecastElt />
+            <ForecastElt />
+            <ForecastElt />
+          </ul>
+        </div>
+        <div className="col-sm-5">
+          <PictureBlock />
+        </div>
+      </div>
+      <a
+        className="GitHubLink"
+        href="https://github.com/ahsamt/Weather_app"
+        id="github"
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub repository
+      </a>
+    </div>
+  );
+}

@@ -1,0 +1,160 @@
+.App {
+  text-align: center;
+  background-color: #f7f6ca;
+  padding: 15px 25px 25px 25px;
+  display: block;
+  margin: 0 auto;
+  font-family: "Karla", sans-serif;
+  font-stretch: expanded;
+  border-radius: 65px;
+  border: 5px solid #06623b;
+  max-width: 600px;
+}
+
+header {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 15px 15px 20px 5px;
+  color: #6e3274;
+  text-align: center;
+}
+@media (max-width: 575px) {
+  header {
+    font-size: 20px;
+    padding-bottom: 8px;
+  }
+}
+
+header #todayIs {
+  font-size: 19px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  color: #06623b;
+}
+
+ul {
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #b83b5e;
+}
+
+a:hover {
+  color: #6e3274;
+}
+
+.active {
+  font-weight: bold;
+  color: #b83b5e;
+  opacity: 100%;
+}
+.inactive {
+  font-weight: normal;
+  color: #06623b;
+  opacity: 70%;
+}
+
+.mainIcon {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.forecast-icon {
+  max-width: 60px;
+  display: inline-block;
+  position: relative;
+  top: -8px;
+  right: 10px;
+}
+
+.DetailsToday {
+  background-color: #daecf2;
+  line-height: 32px;
+  border-radius: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: block;
+  margin: 0 auto;
+  font-size: 23px;
+  font-weight: bold;
+  min-height: 120px;
+  width: 250px;
+  color: #06623b;
+}
+
+.PictureBlock {
+  padding-top: 27px;
+  padding-bottom: 10px;
+}
+
+#humidity,
+#windSpeed {
+  font-size: 15px;
+  color: #06623b;
+  font-weight: lighter;
+  line-height: 1.7;
+}
+
+#weatherPic {
+  max-height: 254px;
+  border-radius: 20%;
+  margin: 0 auto;
+  display: block;
+}
+
+#github {
+  font-size: 15px;
+  color: #06623b;
+}
+
+#mainWindow {
+  font-size: 20px;
+  width: 200px;
+}
+
+#specified {
+  margin: 12px 5px 0px 5px;
+}
+
+#local {
+  margin-top: 0px;
+}
+
+@media (max-width: 575px) {
+  ul {
+    padding-left: 10px;
+  }
+}
+header #cityForm {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 15px 15px 5px 15px;
+  color: #6e3274;
+  text-align: center;
+}
+@media (max-width: 575px) {
+  header #cityForm {
+    font-size: 20px;
+  }
+}
+
+form {
+  padding-bottom: 13px;
+  padding-top: 5px;
+}
+
+button {
+  background-color: #3b6ac0;
+  color: white;
+  transition: ease-in-out 200ms;
+  min-width: 120px;
+  max-width: 155px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #06623b;
+}

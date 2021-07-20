@@ -1,0 +1,19 @@
+.PictureBlock {
+  padding-top: 27px;
+  padding-bottom: 10px;
+}
+
+#weatherPic {
+  max-height: 254px;
+  border-radius: 20%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .PictureBlock {
+    padding-left: 5px;
+    position: relative;
+    right: 10px;
+  }
+}

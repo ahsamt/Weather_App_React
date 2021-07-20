@@ -1,0 +1,41 @@
+.DetailsToday {
+  background-color: #daecf2;
+  line-height: 32px;
+  border-radius: 40px;
+  padding: 15px 0;
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  min-height: 120px;
+  width: 200px;
+  color: #06623b;
+}
+
+.DetailsToday #humidity,
+.DetailsToday #windSpeed {
+  font-size: 15px;
+  color: #06623b;
+  font-weight: lighter;
+  line-height: 1.7;
+}
+
+.DetailsToday a {
+  text-decoration: none;
+  color: #b83b5e;
+}
+
+.DetailsToday a:hover {
+  color: #6e3274;
+}
+
+.DetailsToday .active {
+  font-weight: bold;
+  color: #b83b5e;
+  opacity: 100%;
+}
+.DetailsToday .inactive {
+  font-weight: normal;
+  color: #06623b;
+  opacity: 70%;
+}

@@ -1,0 +1,41 @@
+.ForecastElt {
+  list-style-type: none;
+  text-align: left;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: bolder;
+  font-stretch: expanded;
+  line-height: 1;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+
+.ForecastElt:hover {
+  background-color: #daecf2;
+  transition: ease-in-out 200ms;
+}
+
+.ForecastElt .forecast_temp_max,
+#city,
+#todayTemp {
+  color: #b83b5e;
+}
+
+.ForecastElt .forecast_temp_min {
+  color: #3b6ac0;
+}
+
+.ForecastElt .forecast-icon {
+  max-width: 60px;
+  display: inline-block;
+  position: relative;
+  top: -8px;
+  right: 10px;
+}
+
+@media (max-width: 575px) {
+  .ForecastElt {
+    padding: 7px 0px 7px 5px;
+  }
+}
