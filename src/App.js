@@ -51,13 +51,13 @@ export default function App() {
 
           <div className="row">
             <div className="col-md-3">
-              <IconToday />
+              <IconToday icon={weather.icon} />
             </div>
             <div className="col-md-6">
               <DetailsToday weather={weather} />
             </div>
             <div className="col-md-3 d-none d-md-block">
-              <IconToday />
+              <IconToday icon={weather.icon} />
             </div>
           </div>
           <header id="changeCity">Change city?</header>
@@ -116,9 +116,8 @@ export default function App() {
       </div>
     );
   } else {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(generateWeatherInfo);
-    console.log("api request sent");
+    getResponseData();
+
     return "Loading...";
   }
 }
