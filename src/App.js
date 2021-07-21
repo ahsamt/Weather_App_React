@@ -51,7 +51,7 @@ export default function App() {
       <div className="container">
         <header>
           <div id="todayIs">Tuesday, 19:00</div>
-          <span id="welcomeStatement"> Scattered clouds today in {city}</span>
+          {weather.description} today in {weather.searchCity}
           <span id="city"></span>
         </header>
 
@@ -60,7 +60,7 @@ export default function App() {
             <IconToday />
           </div>
           <div className="col-md-6">
-            <DetailsToday />
+            <DetailsToday weather={weather} />
           </div>
           <div className="col-md-3 d-none d-md-block">
             <IconToday />
