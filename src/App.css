@@ -1,13 +1,19 @@
+:root {
+  --background-color: #feffdf;
+  --green-text-color: #03787a;
+  --headings-color: #005792;
+}
+
 .App {
   text-align: center;
-  background-color: #f7f6ca;
+  background-color: var(--background-color);
   padding: 15px 25px 25px 25px;
   display: block;
   margin: 0 auto;
   font-family: "Lato", sans-serif;
   font-stretch: expanded;
   border-radius: 65px;
-  border: 5px solid #06623b;
+  border: 4px solid var(--green-text-color);
   max-width: 600px;
 }
 
@@ -15,7 +21,7 @@ header {
   font-size: 25px;
   font-weight: bold;
   padding: 15px 15px 20px 5px;
-  color: #6e3274;
+  color: var(--headings-color);
   text-align: center;
 }
 @media (max-width: 575px) {
@@ -29,7 +35,7 @@ header #todayIs {
   font-size: 19px;
   padding-bottom: 15px;
   font-weight: bold;
-  color: #06623b;
+  color: var(--green-text-color);
 }
 
 ul {
@@ -42,7 +48,7 @@ a {
 }
 
 a:hover {
-  color: #6e3274;
+  color: var(--headings-color);
 }
 
 .active {
@@ -52,7 +58,7 @@ a:hover {
 }
 .inactive {
   font-weight: normal;
-  color: #06623b;
+  color: var(--green-text-color);
   opacity: 70%;
 }
 
@@ -82,7 +88,7 @@ a:hover {
   font-weight: bold;
   min-height: 120px;
   width: 250px;
-  color: #06623b;
+  color: var(--green-text-color);
 }
 
 .PictureBlock {
@@ -93,7 +99,7 @@ a:hover {
 #humidity,
 #windSpeed {
   font-size: 15px;
-  color: #06623b;
+  color: var(--green-text-color);
   font-weight: lighter;
   line-height: 1.7;
 }
@@ -127,7 +133,7 @@ header #cityForm {
   font-size: 25px;
   font-weight: bold;
   padding: 15px 15px 5px 15px;
-  color: #6e3274;
+  color: var(--headings-color);
   text-align: center;
 }
 @media (max-width: 575px) {
@@ -142,7 +148,7 @@ form {
 }
 
 button {
-  background-color: #3b6ac0;
+  background-color: var(--headings-color);
   color: white;
   transition: ease-in-out 200ms;
   min-width: 120px;
@@ -151,12 +157,12 @@ button {
 }
 
 button:hover {
-  background-color: #06623b;
+  background-color: var(--green-text-color);
 }
 
 footer {
   font-size: 15px;
-  color: #06623b;
+  color: var(--green-text-color);
 }
 
 footer a {
@@ -165,9 +171,9 @@ footer a {
 }
 
 footer a:hover {
-  color: #6e3274;
+  color: var(--headings-color);
 }
 
 footer a:visited {
-  color: #6e3274;
+  color: var(--headings-color);
 }
