@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./App.css";
 import IconToday from "./IconToday";
 import DetailsToday from "./DetailsToday";
@@ -6,12 +7,51 @@ import ForecastElt from "./ForecastElt";
 import PictureBlock from "./PictureBlock";
 
 export default function App() {
+  let apiKey = "545e2ed5d446d0667b1abac42d152f0d";
+
+  function getResponseData() {
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(generateWeatherInfo);
+    console.log("api request sent");
+  }
+
+  function generateWeatherInfo(response) {
+    console.log(response);
+    setWeather({
+      searchCity: response.data.name,
+      temperature: Math.round(response.data.main.temp),
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      wind: Math.round(response.data.wind.speed),
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+    });
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    getResponseData();
+  }
+
+  let [city, setCity] = useState("London");
+  let [weather, setWeather] = useState({
+    searchCity: "",
+    temperature: "",
+    description: "",
+    humidity: "",
+    wind: "",
+    icon: `http://openweathermap.org/img/wn/02a@2x.png`,
+  });
+
   return (
     <div className="App">
       <div className="container">
         <header>
           <div id="todayIs">Tuesday, 19:00</div>
-          <span id="welcomeStatement"> Check the weather here</span>
+          <span id="welcomeStatement"> Scattered clouds today in {city}</span>
           <span id="city"></span>
         </header>
 
@@ -27,13 +67,14 @@ export default function App() {
           </div>
         </div>
         <header id="changeCity">Change city?</header>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input
             id="searchCity"
-            type="text"
+            type="search"
             placeholder="City name"
-            autoComplete="on"
+            autoComplete="off"
             autoFocus="on"
+            onChange={updateCity}
           />
           <button type="submit" id="specified" value="search">
             Search
