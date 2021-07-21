@@ -1,5 +1,5 @@
 .DetailsToday {
-  background-color: #daecf2;
+  background-color: #d9f1f4;
   line-height: 32px;
   border-radius: 40px;
   padding: 15px 0;
@@ -9,13 +9,13 @@
   font-weight: bold;
   min-height: 120px;
   width: 200px;
-  color: #06623b;
+  color: var(--green-text-color);
 }
 
 .DetailsToday #humidity,
 .DetailsToday #windSpeed {
   font-size: 15px;
-  color: #06623b;
+  color: var(--green-text-color);
   font-weight: lighter;
   line-height: 1.7;
 }
@@ -26,7 +26,7 @@
 }
 
 .DetailsToday a:hover {
-  color: #6e3274;
+  color: var(--headings-color);
 }
 
 .DetailsToday .active {
@@ -36,6 +36,6 @@
 }
 .DetailsToday .inactive {
   font-weight: normal;
-  color: #06623b;
+  color: var(--green-text-color);
   opacity: 70%;
 }
