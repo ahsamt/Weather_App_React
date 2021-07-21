@@ -57,15 +57,25 @@ export default function App() {
           <PictureBlock />
         </div>
       </div>
-      <a
-        className="GitHubLink"
-        href="https://github.com/ahsamt/Weather_app"
-        id="github"
-        target="_blank"
-        rel="noreferrer"
-      >
-        GitHub repository
-      </a>
+
+      <footer>
+        coded by{" "}
+        <a
+          href="https://upbeat-sinoussi-6cb3f6.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Maryia Tarpachova{" "}
+        </a>
+        |{" "}
+        <a
+          href="https://github.com/ahsamt/Weather_App_React"
+          target="_blank"
+          rel="noreferrer"
+        >
+          open source
+        </a>
+      </footer>
     </div>
   );
 }

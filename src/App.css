@@ -105,11 +105,6 @@ a:hover {
   display: block;
 }
 
-#github {
-  font-size: 15px;
-  color: #06623b;
-}
-
 #mainWindow {
   font-size: 20px;
   width: 200px;
@@ -157,4 +152,22 @@ button {
 
 button:hover {
   background-color: #06623b;
+}
+
+footer {
+  font-size: 15px;
+  color: #06623b;
+}
+
+footer a {
+  text-decoration: underline;
+  transition: ease-in-out 200ms;
+}
+
+footer a:hover {
+  color: #6e3274;
+}
+
+footer a:visited {
+  color: #6e3274;
 }
