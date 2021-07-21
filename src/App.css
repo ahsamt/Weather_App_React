@@ -31,13 +31,6 @@ header {
   }
 }
 
-header #todayIs {
-  font-size: 19px;
-  padding-bottom: 15px;
-  font-weight: bold;
-  color: var(--green-text-color);
-}
-
 ul {
   padding-top: 20px;
 }

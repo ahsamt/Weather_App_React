@@ -1,0 +1,10 @@
+.LastUpdated {
+  font-size: 14px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  color: var(--green-text-color);
+}
+
+.LastUpdated #updateTime {
+  font-size: 19px;
+}

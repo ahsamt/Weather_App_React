@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
+import LastUpdated from "./LastUpdated";
 import IconToday from "./IconToday";
 import DetailsToday from "./DetailsToday";
 import ForecastElt from "./ForecastElt";
@@ -12,13 +13,13 @@ export default function App() {
   function getResponseData() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(generateWeatherInfo);
-    console.log("api request sent");
   }
 
   function generateWeatherInfo(response) {
     console.log(response);
     setWeather({
       searchCity: response.data.name,
+      date: response.data.dt,
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -44,7 +45,7 @@ export default function App() {
       <div className="App">
         <div className="container">
           <header>
-            <div id="todayIs">Tuesday, 19:00</div>
+            <LastUpdated date={weather.date} />
             {weather.description} today in {weather.searchCity}
             <span id="city"></span>
           </header>
