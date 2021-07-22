@@ -19,7 +19,7 @@ export default function App() {
     console.log(response);
     setWeather({
       searchCity: response.data.name,
-      date: response.data.dt,
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,

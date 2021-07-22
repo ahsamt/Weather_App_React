@@ -17,10 +17,9 @@ export default function LastUpdated(props) {
       "Saturday",
     ];
 
-    let date = new Date(props.date * 1000);
-    let day = week[date.getDay()];
-    let hours = timeFormat(date.getHours());
-    let minutes = timeFormat(date.getMinutes());
+    let day = week[props.date.getDay()];
+    let hours = timeFormat(props.date.getHours());
+    let minutes = timeFormat(props.date.getMinutes());
     return `${day}, ${hours}:${minutes}`;
   }
 
