@@ -20,56 +20,41 @@
 .App header {
   font-size: 24px;
   font-weight: bold;
-  padding: 12px 15px 10px 5px;
+  padding: 13px 15px 8px 5px;
   color: var(--headings-color);
   text-align: center;
 }
-@media (max-width: 575px) {
-  header {
-    font-size: 20px;
-    padding-bottom: 8px;
-  }
+.App .main-header {
+  margin-bottom: 19px;
 }
 
-ul {
+.App ul {
   padding-top: 20px;
 }
 
-a {
+.App a {
   text-decoration: none;
   color: #b83b5e;
 }
 
-a:hover {
+.App a:hover {
   color: var(--headings-color);
 }
 
-#specified {
+.App #specified {
   margin: 12px 5px 0px 5px;
 }
 
-#local {
+.App #local {
   margin-top: 0px;
 }
 
-@media (max-width: 575px) {
-  ul {
-    padding-left: 10px;
-  }
-}
-
-@media (max-width: 575px) {
-  header #cityForm {
-    font-size: 20px;
-  }
-}
-
-form {
+.App form {
   padding-bottom: 13px;
   padding-top: 0px;
 }
 
-button {
+.App button {
   background-color: var(--headings-color);
   color: white;
   transition: ease-in-out 200ms;
@@ -78,24 +63,40 @@ button {
   border-radius: 4px;
 }
 
-button:hover {
+.App button:hover {
   background-color: var(--green-text-color);
 }
 
-footer {
+.App footer {
   font-size: 15px;
   color: var(--green-text-color);
 }
 
-footer a {
+.App footer a {
   text-decoration: underline;
   transition: ease-in-out 200ms;
 }
 
-footer a:hover {
+.App footer a:hover {
   color: var(--headings-color);
 }
 
-footer a:visited {
+.App footer a:visited {
   color: var(--headings-color);
+}
+
+@media (max-width: 767px) {
+  .App .main-header {
+    font-size: 22px;
+    padding-bottom: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 575px) {
+  header {
+    font-size: 20px;
+  }
+  .App ul {
+    padding-left: 10px;
+  }
 }

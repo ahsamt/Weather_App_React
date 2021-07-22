@@ -47,7 +47,7 @@ export default function App() {
     return (
       <div className="App">
         <div className="container">
-          <header className="mb-3">
+          <header className="main-header">
             <LastUpdated date={weather.date} />
             {weather.description} today in {weather.searchCity}
             <span id="city"></span>
