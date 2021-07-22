@@ -11,6 +11,7 @@ export default function TempToday(props) {
     event.preventDefault();
     setUnit("fahrenheit");
   }
+
   if (unit === "celsius") {
     return (
       <span className="TempToday">

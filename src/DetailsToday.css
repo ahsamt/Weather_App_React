@@ -5,17 +5,13 @@
   padding: 15px 0;
   display: block;
   margin: 0 auto;
-  font-size: 20px;
-  font-weight: bold;
   min-height: 120px;
   width: 200px;
-  color: var(--green-text-color);
 }
 
 .DetailsToday #humidity,
 .DetailsToday #windSpeed {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--green-text-color);
-  font-weight: lighter;
   line-height: 1.7;
 }
