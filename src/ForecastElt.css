@@ -19,7 +19,7 @@
 .ForecastElt .forecast_temp_max,
 #city,
 #todayTemp {
-  color: #b83b5e;
+  color: var(--red-text-color);
 }
 
 .ForecastElt .forecast_temp_min {

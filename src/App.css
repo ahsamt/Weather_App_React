@@ -2,6 +2,7 @@
   --background-color: #feffdf;
   --green-text-color: #03787a;
   --headings-color: #005792;
+  --red-text-color: #b83b5e;
 }
 
 .App {
@@ -34,11 +35,6 @@
 
 .App a {
   text-decoration: none;
-  color: #b83b5e;
-}
-
-.App a:hover {
-  color: var(--headings-color);
 }
 
 .App #specified {
