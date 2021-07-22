@@ -12,15 +12,15 @@
   margin: 0 auto;
   font-family: "Lato", sans-serif;
   font-stretch: expanded;
-  border-radius: 65px;
+  border-radius: 61px;
   border: 4px solid var(--green-text-color);
   max-width: 600px;
 }
 
-header {
+.App header {
   font-size: 24px;
   font-weight: bold;
-  padding: 15px 15px 20px 5px;
+  padding: 12px 15px 10px 5px;
   color: var(--headings-color);
   text-align: center;
 }
@@ -44,71 +44,6 @@ a:hover {
   color: var(--headings-color);
 }
 
-.active {
-  font-weight: bold;
-  color: #b83b5e;
-  opacity: 100%;
-}
-.inactive {
-  font-weight: normal;
-  color: var(--green-text-color);
-  opacity: 70%;
-}
-
-.mainIcon {
-  width: 100px;
-  display: block;
-  margin: 0 auto;
-}
-
-.forecast-icon {
-  max-width: 60px;
-  display: inline-block;
-  position: relative;
-  top: -8px;
-  right: 10px;
-}
-
-.DetailsToday {
-  background-color: #daecf2;
-  line-height: 32px;
-  border-radius: 40px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  display: block;
-  margin: 0 auto;
-  font-size: 23px;
-  font-weight: bold;
-  min-height: 120px;
-  width: 250px;
-  color: var(--green-text-color);
-}
-
-.PictureBlock {
-  padding-top: 27px;
-  padding-bottom: 10px;
-}
-
-#humidity,
-#windSpeed {
-  font-size: 15px;
-  color: var(--green-text-color);
-  font-weight: lighter;
-  line-height: 1.7;
-}
-
-#weatherPic {
-  max-height: 254px;
-  border-radius: 20%;
-  margin: 0 auto;
-  display: block;
-}
-
-#mainWindow {
-  font-size: 20px;
-  width: 200px;
-}
-
 #specified {
   margin: 12px 5px 0px 5px;
 }
@@ -122,13 +57,7 @@ a:hover {
     padding-left: 10px;
   }
 }
-header #cityForm {
-  font-size: 25px;
-  font-weight: bold;
-  padding: 15px 15px 5px 15px;
-  color: var(--headings-color);
-  text-align: center;
-}
+
 @media (max-width: 575px) {
   header #cityForm {
     font-size: 20px;
@@ -137,7 +66,7 @@ header #cityForm {
 
 form {
   padding-bottom: 13px;
-  padding-top: 5px;
+  padding-top: 0px;
 }
 
 button {

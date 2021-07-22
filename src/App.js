@@ -47,7 +47,7 @@ export default function App() {
     return (
       <div className="App">
         <div className="container">
-          <header>
+          <header className="mb-3">
             <LastUpdated date={weather.date} />
             {weather.description} today in {weather.searchCity}
             <span id="city"></span>
@@ -64,7 +64,7 @@ export default function App() {
               <IconToday icon={weather.iconImage} />
             </div>
           </div>
-          <header id="changeCity">Change city?</header>
+          <header className="mt-1">Change city?</header>
           <form onSubmit={handleSubmit}>
             <input
               id="searchCity"
