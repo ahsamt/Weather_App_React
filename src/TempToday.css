@@ -1,3 +1,9 @@
+:root {
+  --background-color: #feffdf;
+  --green-text-color: #03787a;
+  --headings-color: #005792;
+  --red-text-color: #b83b5e;
+}
 .TempToday {
   color: var(--red-text-color);
   font-weight: bold;
