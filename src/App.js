@@ -17,11 +17,13 @@ export default function App() {
 
   function generateWeatherInfo(response) {
     console.log(response);
+    let descriptionLower = response.data.weather[0].description;
     setWeather({
       searchCity: response.data.name,
       date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
-      description: response.data.weather[0].description,
+      description:
+        descriptionLower[0].toUpperCase() + descriptionLower.substring(1),
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       iconID: response.data.weather[0].icon,
