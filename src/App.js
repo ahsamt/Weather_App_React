@@ -24,6 +24,7 @@ export default function App() {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
+      iconID: response.data.weather[0].icon,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -91,7 +92,7 @@ export default function App() {
               </ul>
             </div>
             <div className="col-sm-5">
-              <PictureBlock />
+              <PictureBlock code={weather.iconID} />
             </div>
           </div>
 
