@@ -25,7 +25,7 @@ export default function App() {
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       iconID: response.data.weather[0].icon,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      iconImage: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 
@@ -53,13 +53,13 @@ export default function App() {
 
           <div className="row">
             <div className="col-md-3">
-              <IconToday icon={weather.icon} />
+              <IconToday icon={weather.iconImage} />
             </div>
             <div className="col-md-6">
               <DetailsToday weather={weather} />
             </div>
             <div className="col-md-3 d-none d-md-block">
-              <IconToday icon={weather.icon} />
+              <IconToday icon={weather.iconImage} />
             </div>
           </div>
           <header id="changeCity">Change city?</header>
@@ -92,7 +92,7 @@ export default function App() {
               </ul>
             </div>
             <div className="col-sm-5">
-              <PictureBlock code={weather.iconID} />
+              <PictureBlock weather={weather} />
             </div>
           </div>
 

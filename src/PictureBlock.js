@@ -5,8 +5,8 @@ export default function PictureBlock(props) {
   const pictureMapping = {
     "01d": "/sunny.jpeg",
     "01n": "/sunny.jpeg",
-    "02d": "/cloudy.jpeg",
-    "02n": "/cloudy.jpeg",
+    "02d": "/sunny_int.jpeg",
+    "02n": "/sunny_int.jpeg",
     "03d": "/cloudy.jpeg",
     "03n": "/cloudy.jpeg",
     "04d": "/cloudy.jpeg",
@@ -26,8 +26,8 @@ export default function PictureBlock(props) {
   return (
     <div className="PictureBlock">
       <img
-        src={pictureMapping[props.code]}
-        alt="sunny weather"
+        src={pictureMapping[props.weather.iconID]}
+        alt="props.weather.description"
         className="img-fluid"
         id="weatherPic"
       />
