@@ -1,0 +1,17 @@
+.TempToday {
+  color: #b83b5e;
+}
+
+.TempToday a {
+  text-decoration: none;
+}
+
+.TempToday .active {
+  font-weight: bold;
+
+  opacity: 100%;
+}
+.TempToday .inactive {
+  font-weight: normal;
+  opacity: 70%;
+}

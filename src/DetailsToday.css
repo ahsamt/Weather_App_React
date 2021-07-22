@@ -19,23 +19,3 @@
   font-weight: lighter;
   line-height: 1.7;
 }
-
-.DetailsToday a {
-  text-decoration: none;
-  color: #b83b5e;
-}
-
-.DetailsToday a:hover {
-  color: var(--headings-color);
-}
-
-.DetailsToday .active {
-  font-weight: bold;
-  color: #b83b5e;
-  opacity: 100%;
-}
-.DetailsToday .inactive {
-  font-weight: normal;
-  color: var(--green-text-color);
-  opacity: 70%;
-}
