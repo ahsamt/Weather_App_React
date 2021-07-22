@@ -27,7 +27,7 @@ export default function App() {
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       iconID: response.data.weather[0].icon,
-      iconImage: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      iconImage: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 
