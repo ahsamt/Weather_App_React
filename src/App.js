@@ -10,9 +10,10 @@ import PictureBlock from "./PictureBlock";
 export default function App() {
   const apiKey = "545e2ed5d446d0667b1abac42d152f0d";
 
-  function getResponseData() {
+  function getResponseDataToday() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(generateWeatherInfo);
+    console.log("today info received");
   }
 
   function generateWeatherInfo(response) {
@@ -20,6 +21,8 @@ export default function App() {
     let descriptionLower = response.data.weather[0].description;
     setWeather({
       searchCity: response.data.name,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon,
       date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       description:
@@ -37,7 +40,7 @@ export default function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    getResponseData();
+    getResponseDataToday();
   }
 
   let [city, setCity] = useState("London");
@@ -85,13 +88,7 @@ export default function App() {
 
           <div className="row">
             <div className="col-sm-7" id="forecast">
-              <ul>
-                <ForecastElt />
-                <ForecastElt />
-                <ForecastElt />
-                <ForecastElt />
-                <ForecastElt />
-              </ul>
+              <ForecastElt lat={weather.lat} lon={weather.lon} />
             </div>
             <div className="col-sm-5">
               <PictureBlock weather={weather} />
@@ -120,7 +117,7 @@ export default function App() {
       </div>
     );
   } else {
-    getResponseData();
+    getResponseDataToday();
 
     return "Loading...";
   }
