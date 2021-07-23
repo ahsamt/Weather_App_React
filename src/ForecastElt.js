@@ -12,7 +12,7 @@ export default function ForecastElt(props) {
     console.log(response);
   }
   function getResponseDataForecast() {
-    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.lat}&lon=${props.lon}&appid=${apiKey}&units=metric`;
+    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.weather.lat}&lon=${props.weather.lon}&appid=${apiKey}&units=metric`;
     axios.get(apiURL).then(generateForecastInfo);
     console.log(apiURL);
   }

@@ -87,8 +87,8 @@ export default function App() {
           <br />
 
           <div className="row">
-            <div className="col-sm-7" id="forecast">
-              <ForecastElt lat={weather.lat} lon={weather.lon} />
+            <div className="col-sm-7">
+              <ForecastElt weather={weather} />
             </div>
             <div className="col-sm-5">
               <PictureBlock weather={weather} />

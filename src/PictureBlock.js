@@ -27,7 +27,7 @@ export default function PictureBlock(props) {
     <div className="PictureBlock">
       <img
         src={pictureMapping[props.weather.iconID]}
-        alt="props.weather.description"
+        alt={props.weather.description}
         className="img-fluid"
         id="weatherPic"
       />
