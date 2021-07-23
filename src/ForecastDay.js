@@ -8,17 +8,20 @@ export default function ForecastDay(props) {
     return week[date.getDay()];
   }
 
+  let iconImage = `https://openweathermap.org/img/wn/${props.forecast.weather[0].icon}@2x.png`;
+  let iconDescr = props.forecast.weather[0].desciption;
+
   return (
     <li className="ForecastElt">
       <div className="row">
         <span className="col">{dayFormat()}</span>
-        <span className="forecast_temp_max col">25°C</span>
-        <span className="forecast_temp_min col">15°C</span>
-        <img
-          src="https://openweathermap.org/img/wn/10d@2x.png"
-          alt=""
-          class="forecast-icon col"
-        />
+        <span className="forecast_temp_max col">
+          {Math.round(props.forecast.temp.max)}°C
+        </span>
+        <span className="forecast_temp_min col">
+          {Math.round(props.forecast.temp.min)}°C
+        </span>
+        <img src={iconImage} alt={iconDescr} class="forecast-icon col" />
       </div>
     </li>
   );
