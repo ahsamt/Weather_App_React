@@ -13,11 +13,9 @@ export default function App() {
   function getResponseDataToday() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(generateWeatherInfo);
-    console.log("today info received");
   }
 
   function generateWeatherInfo(response) {
-    console.log(response);
     let descriptionLower = response.data.weather[0].description;
     setWeather({
       searchCity: response.data.name,
