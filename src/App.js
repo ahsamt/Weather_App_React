@@ -61,7 +61,7 @@ export default function App() {
         <div className="container">
           <header className="main-header">
             <LastUpdated date={weather.date} />
-            {weather.description} today in {weather.searchCity}
+            {weather.description} in {weather.searchCity} today
             <span id="city"></span>
           </header>
 
