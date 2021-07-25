@@ -6,6 +6,7 @@ import IconToday from "./IconToday";
 import DetailsToday from "./DetailsToday";
 import ForecastElt from "./ForecastElt";
 import PictureBlock from "./PictureBlock";
+import Footer from "./Footer";
 
 export default function App() {
   const apiKey = "545e2ed5d446d0667b1abac42d152f0d";
@@ -92,24 +93,7 @@ export default function App() {
             </div>
           </div>
 
-          <footer>
-            coded by{" "}
-            <a
-              href="https://upbeat-sinoussi-6cb3f6.netlify.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Maryia Tarpachova{" "}
-            </a>
-            |{" "}
-            <a
-              href="https://github.com/ahsamt/Weather_App_React"
-              target="_blank"
-              rel="noreferrer"
-            >
-              open source
-            </a>
-          </footer>
+          <Footer />
         </div>
       </div>
     );

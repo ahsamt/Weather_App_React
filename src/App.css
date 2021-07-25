@@ -59,24 +59,6 @@
   background-color: var(--green-text-color);
 }
 
-.App footer {
-  font-size: 15px;
-  color: var(--green-text-color);
-}
-
-.App footer a {
-  text-decoration: underline;
-  transition: ease-in-out 200ms;
-}
-
-.App footer a:hover {
-  color: var(--headings-color);
-}
-
-.App footer a:visited {
-  color: var(--headings-color);
-}
-
 @media (max-width: 767px) {
   .App .main-header {
     font-size: 22px;
