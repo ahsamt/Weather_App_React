@@ -1,4 +1,5 @@
 import React from "react";
+import "./ForecastDay.css";
 
 export default function ForecastDay(props) {
   let day = props.forecast.dt;
@@ -14,7 +15,7 @@ export default function ForecastDay(props) {
   }
 
   return (
-    <li>
+    <li className="ForecastDay">
       <div className="row">
         <span className="col">{dayFormat(day)}</span>
         <span className="forecast_temp_max col">{temp_max}°C</span>
