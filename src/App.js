@@ -19,8 +19,7 @@ export default function App() {
     let descriptionLower = response.data.weather[0].description;
     setWeather({
       searchCity: response.data.name,
-      lat: response.data.coord.lat,
-      lon: response.data.coord.lon,
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       description:
@@ -86,7 +85,7 @@ export default function App() {
 
           <div className="row">
             <div className="col-sm-7">
-              <ForecastElt weather={weather} />
+              <ForecastElt coordinates={weather.coordinates} />
             </div>
             <div className="col-sm-5">
               <PictureBlock weather={weather} />

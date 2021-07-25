@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ForecastElt.css";
 import axios from "axios";
 import ForecastDay from "./ForecastDay";
@@ -8,36 +8,34 @@ export default function ForecastElt(props) {
   const [forecast, setForecast] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
-  function generateForecastInfo(response) {
-    console.log(response);
-    setForecast(response.data.daily);
-    console.log("forecast data ready");
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
 
-    // setForecast({
-    //   day: dayFormat(forecastData.dt),
-    //   temp_max: forecastData.temp.max,
-    //   temp_min: forecastData.temp.min,
-    //   iconImage: `https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png`,
-    //   iconDescr: forecastData.weather[0].desciption,
-    // });
+  function generateForecastInfo(response) {
+    setForecast(response.data.daily);
     setLoaded(true);
   }
 
   function getResponseDataForecast() {
-    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.weather.lat}&lon=${props.weather.lon}&appid=${apiKey}&units=metric`;
-    console.log(apiURL);
+    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.coordinates.lat}&lon=${props.coordinates.lon}&appid=${apiKey}&units=metric`;
     axios.get(apiURL).then(generateForecastInfo);
   }
 
   if (loaded) {
-    console.log(`Forecast is ${forecast}`);
     return (
       <ul className="ForecastElt">
-        <ForecastDay forecast={forecast} />
-        <ForecastDay forecast={forecast} />
-        <ForecastDay forecast={forecast} />
-        <ForecastDay forecast={forecast} />
-        <ForecastDay forecast={forecast} />
+        {forecast.map(function (day, index) {
+          if (index < 5) {
+            return (
+              <span key={index}>
+                <ForecastDay forecast={day} />
+              </span>
+            );
+          } else {
+            return null;
+          }
+        })}
       </ul>
     );
   } else {
