@@ -3,13 +3,3 @@
   font-size: 20px;
   font-weight: bold;
 }
-
-.TempToday a {
-  color: var(--red-text-color);
-  font-weight: normal;
-  opacity: 0.7;
-}
-
-.TempToday a:hover {
-  text-decoration: underline;
-}

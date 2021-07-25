@@ -67,13 +67,13 @@ export default function App() {
 
           <div className="row">
             <div className="col-md-3">
-              <IconToday icon={weather.iconImage} />
+              <IconToday weather={weather} />
             </div>
             <div className="col-md-6">
               <DetailsToday weather={weather} />
             </div>
             <div className="col-md-3 d-none d-md-block">
-              <IconToday icon={weather.iconImage} />
+              <IconToday weather={weather} />
             </div>
           </div>
           <header className="mt-1">Change city?</header>
@@ -99,7 +99,6 @@ export default function App() {
             Local weather
           </button>
           <br />
-
           <div className="row">
             <div className="col-sm-7">
               <ForecastElt coordinates={weather.coordinates} />
@@ -108,14 +107,12 @@ export default function App() {
               <PictureBlock weather={weather} />
             </div>
           </div>
-
           <Footer />
         </div>
       </div>
     );
   } else {
     getResponseDataToday();
-
     return "Loading...";
   }
 }
