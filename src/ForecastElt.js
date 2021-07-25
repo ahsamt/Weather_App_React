@@ -40,6 +40,6 @@ export default function ForecastElt(props) {
     );
   } else {
     getResponseDataForecast();
-    return "loading";
+    return null;
   }
 }
