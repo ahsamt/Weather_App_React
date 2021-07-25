@@ -31,6 +31,16 @@ export default function App() {
       iconImage: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
+  function getLocalCoords(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(generateWeatherInfo);
+  }
+
+  function checkLocalCoords() {
+    navigator.geolocation.getCurrentPosition(getLocalCoords);
+  }
 
   function updateCity(event) {
     setCity(event.target.value);
@@ -39,6 +49,7 @@ export default function App() {
   function handleSubmit(event) {
     event.preventDefault();
     getResponseDataToday();
+    event.target.reset();
   }
 
   let [city, setCity] = useState("London");
@@ -79,7 +90,12 @@ export default function App() {
               Search
             </button>
           </form>
-          <button type="text" id="local" value="local">
+          <button
+            type="text"
+            id="local"
+            value="local"
+            onClick={checkLocalCoords}
+          >
             Local weather
           </button>
           <br />

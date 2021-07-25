@@ -22,7 +22,7 @@ export default function PictureBlock(props) {
     "50d": "/mist.jpeg",
     "50n": "/mist.jpeg",
   };
-  console.log(props.code);
+
   return (
     <div className="PictureBlock">
       <img
