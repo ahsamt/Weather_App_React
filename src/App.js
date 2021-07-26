@@ -10,10 +10,15 @@ import Footer from "./Footer";
 
 export default function App() {
   const apiKey = "545e2ed5d446d0667b1abac42d152f0d";
-
+  const axios = require("axios");
   function getResponseDataToday() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(generateWeatherInfo);
+    axios
+      .get(apiUrl)
+      .then(generateWeatherInfo)
+      .catch(function (error) {
+        alert(`Sorry, we do not have weather details for ${city}`);
+      });
   }
 
   function generateWeatherInfo(response) {
