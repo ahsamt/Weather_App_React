@@ -46,6 +46,9 @@
   padding-top: 0px;
 }
 
+.App input {
+  outline: none;
+}
 .App button {
   background-color: var(--headings-color);
   color: white;

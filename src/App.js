@@ -18,6 +18,7 @@ export default function App() {
       .then(generateWeatherInfo)
       .catch(function (error) {
         alert(`Sorry, we do not have weather details for ${city}`);
+        setCity("");
       });
   }
 
@@ -36,6 +37,7 @@ export default function App() {
       iconImage: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
+
   function getLocalCoords(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
@@ -53,8 +55,12 @@ export default function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    getResponseDataToday();
-    event.target.reset();
+    if (event.target[0].value) {
+      getResponseDataToday();
+      event.target.reset();
+    } else {
+      alert("Please enter the name of the city in the search box");
+    }
   }
 
   let [city, setCity] = useState("London");

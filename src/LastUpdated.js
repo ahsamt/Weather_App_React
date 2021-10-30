@@ -26,7 +26,7 @@ export default function LastUpdated(props) {
   let updateTime = appDate();
   return (
     <div className="LastUpdated">
-      Last update
+      This forecast was last updated on
       <div id="updateTime"> {updateTime}</div>
     </div>
   );
